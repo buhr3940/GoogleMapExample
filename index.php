@@ -31,7 +31,7 @@ function initialize() {
   var marker<?php echo $i; ?> = new google.maps.Marker({
       position: new google.maps.LatLng(44.9<?php echo $i; ?>5766,-93.171616),
       map: map,
-      title: 'Hello World!'
+      title: 'Hello <?php echo $i; ?>!'
   });
 
   <?php
