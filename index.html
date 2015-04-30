@@ -26,6 +26,16 @@ function initialize() {
       map: map,
       title: 'Hello World!'
   });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(44.945766,-93.171616),
+      map: map,
+      title: 'Hello World!'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(44.925766,-93.141616),
+      map: map,
+      title: 'Hello World!'
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
