@@ -12,6 +12,7 @@
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script src="phppins.php"></script>
     <script>
 function initialize() {
   var myLatlng = new google.maps.LatLng(44.925766,-93.171616);
@@ -26,23 +27,16 @@ function initialize() {
       map: map,
       title: 'Hello World!'
   });
-
-  <?php    for ( $i = 10 ; $i >= 0; $i--) {  ?>
-  var marker<?php echo $i; ?> = new google.maps.Marker({
-      position: new google.maps.LatLng(44.9<?php echo $i; ?>5766,-93.171616),
-      map: map,
-      title: 'Hello <?php echo $i; ?>!'
-  });
-
-  <?php
-    }; //end for loop
-  ?>
+  loadpins(map);
 
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
+
+
   </head>
   <body>
   from https://developers.google.com/maps/documentation/javascript/examples/marker-simple
