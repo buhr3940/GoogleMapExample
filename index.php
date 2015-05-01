@@ -1,3 +1,6 @@
+<?php
+include_once ('dbtomap.php');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,15 +31,9 @@ function initialize() {
       title: 'Hello World!'
   });
   loadpins(map);
-
 }
-
-
 google.maps.event.addDomListener(window, 'load', initialize);
-
     </script>
-
-
   </head>
   <body>
   from https://developers.google.com/maps/documentation/javascript/examples/marker-simple

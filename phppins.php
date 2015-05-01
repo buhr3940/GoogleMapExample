@@ -1,14 +1,16 @@
 <?php
+  include_once ('dbtomap.php');
   header('Content-Type: text/javascript; charset=UTF-8');
 ?>
 //JS function to not load the pins too early
+
 function loadpins(map){
 
   <?php    for ( $i = 10 ; $i >= 0; $i--) {  ?>
   var marker<?php echo $i; ?> = new google.maps.Marker({
-      position: new google.maps.LatLng(44.9<?php echo $i; ?>5766,-93.171616),
+      position: new google.maps.LatLng(<?php echo $data['lat']; ?> , <?php echo $data['lon']; ?> ),
       map: map,
-      title: 'Hello <?php echo $i; ?>!'
+      title: 'Hello <?php echo $data['name']; ?>!'
   });
 
   var contentString<?php echo $i; ?> = '<div id="content">'+
